@@ -1,0 +1,307 @@
+body {
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 60px;
+            padding-bottom: 50px;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-attachment: fixed;
+            color: #eaeaea;
+            scroll-behavior: smooth;
+        }
+
+        
+
+
+        /* ==== NAVBAR ==== */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            height: 60px;
+        }
+
+        .nav-link {
+            position: relative;
+            color: #ddd !important;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #0dcaf0 !important;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0dcaf0;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        /* ==== SEARCH INPUT ==== */
+        .search-blur {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .search-blur::placeholder {
+            color: #bbb;
+        }
+
+        /* ==== CUSTOM BUTTON ==== */
+        .cssbuttons-io-button {
+            background: #0dcaf0;
+            color: #0b0b0b;
+            font-family: inherit;
+            padding: 0.35em 3.3em 0.35em 1.2em;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 0.9em;
+            border: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 2.8em;
+            box-shadow: 0 0 15px rgba(13, 202, 240, 0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cssbuttons-io-button:hover {
+            background: #11b5da;
+        }
+
+        .cssbuttons-io-button .icon {
+            background: white;
+            margin-left: 1em;
+            position: absolute;
+            right: 0.3em;
+            height: 2.2em;
+            width: 2.2em;
+            border-radius: 0.7em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .cssbuttons-io-button:hover .icon {
+            width: calc(100% - 0.6em);
+        }
+
+        .cssbuttons-io-button .icon svg {
+            color: #0dcaf0;
+            width: 1.1em;
+            transition: transform 0.3s;
+        }
+
+        .cssbuttons-io-button:hover .icon svg {
+            transform: translateX(0.1em);
+        }
+
+
+        /* ==== GLASS CARD ==== */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(13, 202, 240, 0.3);
+        }
+
+        /* ==== CONTACT FORM INPUTS (Different from modal inputs) ==== */
+        .contact-form .form-control {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form .form-control::placeholder {
+            color: #aaa;
+        }
+
+        .contact-form .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: #0dcaf0;
+            box-shadow: 0 0 8px rgba(13, 202, 240, 0.3);
+            color: #fff;
+        }
+
+        .contact-form textarea.form-control {
+            resize: none;
+        }
+
+        /* ==== GLASS MODALS (Original Style) ==== */
+        .glass-modal {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            border-radius: 1rem;
+            box-shadow: 0 0 25px rgba(13, 202, 240, 0.3);
+        }
+
+        /* ==== MODAL FORM INPUTS (Original Style) ==== */
+        .modal-content .form-control {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .modal-content .form-control::placeholder {
+            color: #aaa;
+        }
+
+        .modal-content .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: #0dcaf0;
+            box-shadow: 0 0 8px rgba(13, 202, 240, 0.3);
+            color: #fff;
+        }
+
+        .modal-content h5 {
+            letter-spacing: 1px;
+        }
+
+        .modal-content p a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==== FEATURE ICONS ==== */
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(13, 202, 240, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: #0dcaf0;
+        }
+
+        .glass-card:hover .feature-icon {
+            background: rgba(13, 202, 240, 0.25);
+            transform: rotate(360deg);
+        }
+
+        /* ==== CONTACT ICONS ==== */
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(13, 202, 240, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icon i {
+            font-size: 1.5rem;
+            color: #0dcaf0;
+        }
+
+        /* ==== BUTTONS ==== */
+        .btn-info {
+            background-color: #0dcaf0;
+            border: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-info:hover {
+            background-color: #0bb4d1;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
+        }
+
+        /* ==== FOOTER ==== */
+        .footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 20px;
+            border-top: 3px solid #0f3460;
+        }
+
+        /* ==== SECTION STYLING ==== */
+        .section-title {
+            color: #0dcaf0;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #0dcaf0;
+            border-radius: 2px;
+        }
+
+        /* ==== STATS COUNTER ==== */
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0dcaf0;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: #ddd;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ==== MAP CONTAINER ==== */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #0dcaf0;
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
